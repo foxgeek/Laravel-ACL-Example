@@ -9,7 +9,8 @@
                 <p>
                     {{ $post->body }}
                 </p>
-                <strong>Autor: {{ $post->user->name }}</strong>
+                <strong style="display: block;">Autor: {{ $post->user->name }}</strong>
+                <a href="{{ route('posts.edit', ['id'=> $post->id]) }}" class="btn btn-primary">Editar Post</a>
                 <hr>
             @empty
                 <h3>Nenhum post encontrado</h3>
@@ -20,3 +21,4 @@
     </div>
 </div>
 @endsection
+\
