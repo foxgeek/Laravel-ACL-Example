@@ -10,7 +10,9 @@
                     {{ $post->body }}
                 </p>
                 <strong style="display: block;">Autor: {{ $post->user->name }}</strong>
+                @can('update-post', $post)
                 <a href="{{ route('posts.edit', ['id'=> $post->id]) }}" class="btn btn-primary">Editar Post</a>
+                @endcan
                 <hr>
             @empty
                 <h3>Nenhum post encontrado</h3>
