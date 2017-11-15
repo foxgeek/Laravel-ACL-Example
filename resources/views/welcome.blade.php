@@ -60,7 +60,6 @@
                                 <hr>
                             @empty
                                 <h3>Nenhum post encontrado</h3>
-                                <p>Para criar os posts use a PostFactory.</p>
                             @endforelse
 
                         </div>
